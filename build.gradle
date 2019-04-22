@@ -27,5 +27,6 @@ dependencies {
 	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.4'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
