@@ -14,7 +14,7 @@ public class UserController {
 
     private final UserService userService;
 
-    @RequestMapping(method = {RequestMethod.POST})
+    @RequestMapping(value = "user", method = {RequestMethod.POST})
     public User registerUser(@RequestBody User user) {
         userService.createUser(user);
         return user;
@@ -30,9 +30,10 @@ public class UserController {
         return userService.getUser(id);
     }
 
-    @RequestMapping(method = {RequestMethod.GET})
+    @RequestMapping(value = "user", method = {RequestMethod.GET})
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
+
 
 }
